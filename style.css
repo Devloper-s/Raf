@@ -1,0 +1,312 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+/* header {
+  border: 1px solid #ccc;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+} */
+.nav {
+  padding: 5px;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+.ul1 {
+  margin-left: 10px;
+  border: 1px solid white;
+  margin-top: 5px;
+  float: left;
+  /* background-color: black; */
+  background: linear-gradient(to right, lightgreen, lightblue);
+  border-radius: 8px;
+  width: 10%;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  animation-name: color1;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+/* @keyframes color1 {
+  20% {
+    background: linear-gradient(to right, lightblue, lightgreen);
+  }
+  40% {
+    background: linear-gradient(to right, lightgreen, lightblue);
+  }
+  /* 60% {
+    background: linear-gradient(to right, green, blue);
+  }
+  80% {
+    background: linear-gradient(to right, blue, green);
+  } */
+/* } */
+.Label {
+  color: transparent;
+  font-size: 22px;
+  /* text-transform: uppercase; */
+  position: relative; /* Added this for better relative positioning */
+  overflow: hidden;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Label::before {
+  content: attr(data-text); /* Using the data-text attribute */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  color: white;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+  overflow: hidden;
+  animation-name: d;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes d {
+  0% {
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.ul2 {
+  margin-top: 2px;
+  float: left;
+  display: inline-flex;
+  gap: 20px;
+  text-align: center;
+  margin-left: 20px;
+  transform: translateX(500%);
+  animation: left-slide 1.5s ease-out forwards;
+}
+@keyframes left-slide {
+  to {
+    transform: translateY(0%);
+  }
+}
+.li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.li a {
+  color: white;
+}
+#menuIcon {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 6px 7px 6px 7px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#container {
+  display: none;
+  width: 40%;
+  position: absolute;
+  margin-left: 410px;
+  /* background-color: white; */
+  padding: 20px;
+  box-shadow: 0px 2px 10px black;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slideIn 1s ease-out forwards;
+}
+@keyframes slideIn {
+  to {
+    transform: translateY(20%);
+  }
+}
+.Rheader {
+  padding: 5px;
+}
+.h2 {
+  text-align: left;
+  color: white;
+  font-size: 25px;
+  float: left;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+#close {
+  padding: 5px;
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  filter: brightness(150%);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  background-color: rgba(0, 0, 0, 0.102);
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  height: 25px;
+  color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  background-color: rgba(255, 255, 255, 0.183);
+  /* border-color: #6c63ff; */
+  color: white;
+  box-shadow: 3px 2px 8px gray;
+}
+
+.gender-group {
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.gender-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.gender-options {
+  display: flex;
+  align-items: center;
+  /* gap: 5px; */
+}
+#male,
+#female {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  width: 5%;
+}
+.register-button {
+  /* background: linear-gradient(to right, deepskyblue, blue); */
+  background: linear-gradient(to top, lightgray, transparent);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+.ImagesDiv {
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  border: 2px solid #000;
+  animation-name: L-slide;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  background-position: center;
+  background-image: url("L1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @keyframes L-slide {
+  30% {
+    background-image: url("photo-1689718107045-513b35f1a356.jpg");
+  }
+  60% {
+    background-image: url("Download-Images-Dark-Wallpapers-HD.png");
+  }
+  90% {
+    background-image: url("photo-1687463221020-b8769b32c622.jpg");
+  }
+} */
+
+.Conataint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  padding: 10px;
+  margin-top: 50px;
+  padding: 10px;
+  color: white;
+
+}
+.textDiv {
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  width: 35%;
+  border:1px solid white;
+  position: absolute;
+  color: white;
+  /*margin-top: 18%;
+  margin-left:31%;*/
+  justify-content: center;
+}
+input[type="button"]{
+  margin-top: 5px;
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  box-shadow: 1px 2px 10px lightgray;
+  padding: 7px 10px 7px 10px;
+  border-radius:5px;
+  width: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+}
